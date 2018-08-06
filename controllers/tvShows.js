@@ -27,5 +27,10 @@ tvShowRouter.put('/:id', function(req, res){
   res.json({data: tvShows});
 })
 //Delete a TV Show
+tvShowRouter.delete('/:id', function(req, res){
+  let index = req.params.id;
+  tvShows.splice(index, 1);
+  res.json({data: tvShows});
+})
 
 module.exports = tvShowRouter;
