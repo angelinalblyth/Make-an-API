@@ -1,7 +1,15 @@
 const express = require('express');
 const tvShowRouter = new express.Router();
 
-let tvShows = ["Ozark", "Game of Thrones", "Always Sunny in Philedelphia", "Rick and Morty", "Firefly"];
+// let tvShows = ["Ozark", "Game of Thrones", "Always Sunny in Philedelphia", "Rick and Morty", "Firefly"];
+
+let tvShows = [
+  {"title":"Ozark", "genre": "Thriller"},
+  {"title":"Game of Thrones", "genre": "Fantasy"},
+  {"title":"Always Sunny in Philedelphia", "genre": "Comedy"},
+  {"title":"Rick and Morty", "genre": "Animated Sitcom"},
+  {"title":"Firefly", "genre": "Western"}
+];
 
 //Show a TV Show
 tvShowRouter.get('/:id', function(req, res){

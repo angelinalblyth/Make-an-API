@@ -32,4 +32,5 @@ starRouter.delete('/:id', function(req, res){
   tvStars.splice(index, 1);
   res.json({data: tvStars});
 })
+
 module.exports = starRouter;
