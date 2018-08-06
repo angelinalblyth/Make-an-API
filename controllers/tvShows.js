@@ -21,7 +21,11 @@ tvShowRouter.post('/', function(req, res){
 })
 
 //Update a TV Show
-
+tvShowRouter.put('/:id', function(req, res){
+  let index = req.params.id;
+  tvShows[index] = req.body.tvshow;
+  res.json({data: tvShows});
+})
 //Delete a TV Show
 
 module.exports = tvShowRouter;

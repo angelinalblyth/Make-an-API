@@ -21,7 +21,11 @@ starRouter.post('/', function(req, res){
 })
 
 //Update a TV Star
-
+starRouter.put('/:id', function(req, res){
+  let index = req.params.id;
+  tvStars[index] = req.body.tvstar;
+  res.json({data: tvStars});
+})
 //Delete a TV Star
 
 module.exports = starRouter;
